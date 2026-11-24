@@ -1,11 +1,10 @@
-import { Cpu, Laptop, Image as ImageIcon, Code2, Workflow } from 'lucide-react'
+import { Cpu, Laptop, Code2, Workflow } from 'lucide-react'
 
 const NODES = [
   { icon: Laptop, label: 'Ubuntu-Lite', sub: 'VM' },
   { icon: Workflow, label: 'Py', sub: 'FastAPI' },
   { icon: Cpu, label: 'Hard', sub: 'MOSFET' },
   { icon: Code2, label: 'C / C++', sub: 'Firmware' },
-  { icon: ImageIcon, label: 'Image', sub: 'EDUKIT 200' },
 ]
 
 export function ArchitectureStrip() {
@@ -31,8 +30,8 @@ export function ArchitectureStrip() {
         ))}
       </div>
       <p className="mt-3 font-mono text-[10px] leading-relaxed text-muted">
-        App web → Submit → bridge Python sur Ubuntu-Lite → script / C++ → hardware. La boucle Image
-        alimente le script pour supervision visuelle du module.
+        App web → Submit → bridge Python sur Ubuntu-Lite → script / C++ → hardware. WebGL Die
+        suit la température live (cold / normal / hot).
       </p>
     </div>
   )

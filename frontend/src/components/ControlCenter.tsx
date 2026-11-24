@@ -107,6 +107,8 @@ export function ControlCenter({
 
         <ActuatorGauge
           value={config.actuator_percent}
+          temperature={currentTemp}
+          maxTemperature={config.max_temperature}
           onChange={onActuator}
           live={live}
         />

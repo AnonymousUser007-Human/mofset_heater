@@ -4,7 +4,6 @@ import { motion } from 'framer-motion'
 import { ArchitectureStrip } from './components/ArchitectureStrip'
 import { ControlCenter } from './components/ControlCenter'
 import { DualTempCharts } from './components/DualTempCharts'
-import { MosfetMedia } from './components/MosfetMedia'
 import { MosfetScene } from './components/MosfetScene'
 import { StatusRail } from './components/StatusRail'
 import { TensionPipeline } from './components/TensionPipeline'
@@ -121,17 +120,11 @@ export default function App() {
       </div>
 
       <div className="grid grid-cols-1 gap-4 md:gap-5 lg:grid-cols-12">
-        <div className="lg:col-span-5">
+        <div className="lg:col-span-12">
           <MosfetScene
             temperature={state.current_temperature}
             maxTemperature={config.max_temperature}
             active={running}
-          />
-        </div>
-        <div className="lg:col-span-7">
-          <MosfetMedia
-            active={running}
-            temperature={state.current_temperature}
           />
         </div>
         <div className="panel-glass rounded-2xl p-4 md:p-5 lg:col-span-12">
